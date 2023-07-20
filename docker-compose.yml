@@ -1,0 +1,29 @@
+version: '3'
+services:
+  movies:
+    image: maheshrebba99/movies:latest
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 3
+
+  train:
+    image: maheshrebba99/train:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+
+  dth:
+    image: maheshrebba99/dth:latest
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+
+  recharge:
+    image: maheshrebba99/recharge:latest
+    ports:
+      - "83:80"
+    deploy:
+      replicas: 3
